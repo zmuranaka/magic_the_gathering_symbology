@@ -1,0 +1,24 @@
+name: mtg_symbology
+description: "Easily display Magic: The Gathering symbols as Flutter SVG widgets."
+repository: https://github.com/zmuranaka/mtg_symbology
+issue_tracker: https://github.com/zmuranaka/mtg_symbology/issues
+version: 0.0.1
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  test: ^1.25.15
+
+flutter:
+  assets:
+    - assets/
