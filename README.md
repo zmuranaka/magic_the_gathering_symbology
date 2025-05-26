@@ -1,6 +1,6 @@
 Easily display Magic: The Gathering symbols as Flutter widgets!
 
-## Examples
+## Example
 
 Develop custom MTG Flutter widgets easily with full support for all MTG symbols:
 
@@ -8,8 +8,8 @@ Develop custom MTG Flutter widgets easily with full support for all MTG symbols:
 
 ## Features
 
-* SVGs for all MTG symbols
-* Class to support displaying any of the MTG symbols as a Flutter SVG
+* SVGs for all MTG symbols - "Un" sets included!
+* Easy class and methods to display any of the MTG symbols as a Flutter widget
 * Works on Android, iOS, Linux, MacOS, Web, Windows
 
 ## Getting started
@@ -67,7 +67,8 @@ For a more detailed example, look in the [example](https://github.com/zmuranaka/
 ## Contributing
 
 Contributions are welcome, but keep in mind that the scope of this package will stay limited to just providing the SVG assets and the ways to display them.
-In order for a contribution to be considered, it must follow the linter rules defined in the [analysis_options](https://github.com/zmuranaka/mtg_symbology/blob/master/analysis_options.yaml) file, if new functionality is being added
+
+In order for a contribution to be considered, it must follow the linter rules defined in the [analysis_options](https://github.com/zmuranaka/mtg_symbology/blob/master/analysis_options.yaml) file.
 
 ## Legal
 
