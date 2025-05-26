@@ -8,9 +8,10 @@ Develop custom MTG Flutter widgets easily with full support for all MTG symbols:
 
 ## Features
 
-* SVGs for all MTG symbols - "Un" sets included!
-* Easy class and methods to display any of the MTG symbols as a Flutter widget
-* Works on Android, iOS, Linux, MacOS, Web, Windows
+* SVG assets for all MTG symbols - "Un" sets included!
+* Easy way to display any of these symbols as a Flutter widget
+* Minimal external dependencies - only [flutter_svg](https://pub.dev/packages/flutter_svg) is used
+* Works on Android, iOS, Linux, MacOS, Web, and Windows
 
 ## Getting started
 
@@ -20,8 +21,33 @@ First, import the library in one of your files.
 import 'package:mtg_symbology/mtg_symbology.dart';
 ```
 
-Retrieve an [MtgSymbol](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/MtgSymbol-class.html) instance using the [mtgSymbology Map](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/mtgSymbology-constant.html).
+Retrieve an [MtgSymbol](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/MtgSymbol-class.html) instance using the [mtgSymbology](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/mtgSymbology-constant.html) `Map`.
+
+```dart
+final symbol = mtgSymbology['{W}']!;
+```
+
 Then call its `toSvg` method to convert the `MtgSymbol` object into an [SvgPicture](https://pub.dev/documentation/flutter_svg/latest/svg/SvgPicture-class.html) widget.
+
+```dart
+final symbolSvg = symbol.toSvg();
+```
+
+Finally, display it in your app like you would any other [SvgPicture](https://pub.dev/documentation/flutter_svg/latest/svg/SvgPicture-class.html) widget!
+
+```dart
+return Scaffold(
+  appBar: AppBar(
+    backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    title: Text('Mtg Symbology Example'),
+  ),
+  body: SafeArea(
+    child: Center(child: symbolSvg),
+  ),
+);
+```
+
+For a more detailed example, look in the [example](https://github.com/zmuranaka/mtg_symbology/tree/master/example) directory.
 
 ## API
 
@@ -45,24 +71,6 @@ Represents a single Magic: The Gathering symbol.
 
 A [Map](https://api.dart.dev/dart-core/Map-class.html) of [String](https://api.dart.dev/dart-core/String-class.html) keys and [MtgSymbol](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/MtgSymbol-class.html) instance values.
 The keys are based on the notation used in Magic: The Gathering's [Comprehensive Rules](https://magic.wizards.com/en/rules).
-
-## Example
-
-```dart
-final symbol = mtgSymbology['{W}']!;
-final symbolSvg = symbol.toSvg();
-return Scaffold(
-  appBar: AppBar(
-    backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-    title: Text('Mtg Symbology Example'),
-  ),
-  body: SafeArea(
-    child: Center(child: symbolSvg),
-  ),
-);
-```
-
-For a more detailed example, look in the [example](https://github.com/zmuranaka/mtg_symbology/tree/master/example) directory.
 
 ## Contributing
 
