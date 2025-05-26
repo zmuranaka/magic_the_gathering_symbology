@@ -20,7 +20,7 @@ First, import the library in one of your files.
 import 'package:mtg_symbology/mtg_symbology.dart';
 ```
 
-Retrieve an [MtgSymbol](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/MtgSymbol-class.html) instance using the [mtgSymbology](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/mtgSymbology-constant.html) [Map](https://api.dart.dev/dart-core/Map-class.html).
+Retrieve an [MtgSymbol](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/MtgSymbol-class.html) instance using the [mtgSymbology Map](https://pub.dev/documentation/mtg_symbology/latest/mtg_symbology/mtgSymbology-constant.html).
 Then call its `toSvg` method to convert the `MtgSymbol` object into an [SvgPicture](https://pub.dev/documentation/flutter_svg/latest/svg/SvgPicture-class.html) widget.
 
 ## API
@@ -50,7 +50,7 @@ The keys are based on the notation used in Magic: The Gathering's [Comprehensive
 
 ```dart
 final symbol = mtgSymbology['{W}']!;
-final symbolSvg = symbol?.toSvg();
+final symbolSvg = symbol.toSvg();
 return Scaffold(
   appBar: AppBar(
     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
