@@ -1,3 +1,3 @@
-## 1.0.0
+### 0.0.1
 
-Initial stable release.
+* Setting up repository and package on pub.dev
